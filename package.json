@@ -4,11 +4,18 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "format": "prettier -w src",
+    "eslint": "eslint --fix --ext .ts,.tsx src",
+    "stylelint": "stylelint 'src/**/*.scss' --fix",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "src": []
+    "src": [
+      "npm run format",
+      "npm run eslint",
+      "npm run stylelint"
+    ]
   },
   "dependencies": {
     "react": "^18.2.0",
