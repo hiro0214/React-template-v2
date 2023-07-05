@@ -6,15 +6,19 @@
     "build": "vite build",
     "format": "prettier -w src",
     "eslint": "eslint --fix --ext .ts,.tsx src",
-    "stylelint": "stylelint 'src/**/*.scss' --fix",
+    "stylelint": "stylelint 'src/**/*.{css,scss}' --fix",
     "prepare": "husky install",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
-    "src": [
-      "npm run format",
-      "npm run eslint",
+    "src/*": [
+      "npm run format"
+    ],
+    "src/**/*.{css,scss}": [
       "npm run stylelint"
+    ],
+    "src/**/*.{ts,tsx}": [
+      "npm run eslint"
     ]
   },
   "dependencies": {
@@ -22,6 +26,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@types/node": "^20.3.3",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
@@ -41,7 +46,6 @@
     "lint-staged": "^13.2.3",
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.8",
-    "styled-component": "^2.8.0",
     "stylelint": "^15.9.0",
     "stylelint-config-recess-order": "^4.2.0",
     "stylelint-config-recommended": "^12.0.0",
