@@ -6,6 +6,10 @@ export default defineConfig({
   base: '/',
   root: 'src',
   plugins: [react()],
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true
+  },
   server: {
     port: 8080,
     open: true,
