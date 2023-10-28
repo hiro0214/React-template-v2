@@ -3,9 +3,16 @@
   "customSyntax": "postcss-scss",
   "overrides": [
     {
-      "files": ["**/*.{jsx,tsx}"],
+      "files": ["**/*.{ts,jsx,tsx}"],
       "customSyntax": "@stylelint/postcss-css-in-js"
     }
   ],
-  "ignoreFiles": ["vite.config.ts"]
+  "ignoreFiles": ["vite.config.ts"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "function-no-unknown": null,
+    "no-duplicate-selectors": null,
+    "no-descending-specificity": null,
+    "declaration-empty-line-before": "never"
+  }
 }

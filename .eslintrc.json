@@ -16,9 +16,11 @@
     "arrow-body-style": "off",
     "react/require-default-props": "off",
     "react/prop-types": "off",
+    "react/no-array-index-key": "warn",
     "react/jsx-props-no-spreading": "off",
     "react/react-in-jsx-scope": "off",
-    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": "off",
+    "jsx-a11y/anchor-is-valid": "warn",
     "react-refresh/only-export-components": "warn",
     "react/function-component-definition": [
       2,
